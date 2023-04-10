@@ -11,9 +11,9 @@ const otpGenerator = require("otp-generator");
 userRouter.use(cors());
 var otp;
 
-// userRouter.get("/", async (req, res) => {
-//   res.send({ msg: "Home Page" });
-// });
+userRouter.get("/", async (req, res) => {
+  res.send({ msg: "Home Page" });
+});
 
 userRouter.post("/emailVerify", async (req, res) => {
   otp = otpGenerator.generate(4, {
